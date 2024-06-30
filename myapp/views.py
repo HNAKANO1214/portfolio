@@ -19,10 +19,6 @@ class IndexView(View):
         if profile_data.exists():
             # idを降順に並べ替え、最新のプロフィールデータを取得
             profile_data = profile_data.order_by('-id')[0]
-            # サブタイトルが未入力の場合は空文字に変換
-            # 任意項目だが、未設定の場合Noneと表示されるため
-            if profile_data.subtitle is None:
-                profile_data.subtitle = ''
         work_data = Work.objects.order_by('-id')
         return render(request, 'myapp/index.html', {
             'profile_data': profile_data,
