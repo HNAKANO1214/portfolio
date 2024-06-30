@@ -11,18 +11,18 @@ from .models import Profile, Work, Experience, Education, Software, Technical
 
 
 class IndexView(View):
-    """トップページのビュー
-
-    """
+    """トップページのビュー"""
 
     def get(self, request, *args, **kwargs):
-        """get関数
-
-        """
+        """get関数"""
         profile_data = Profile.objects.all()
         if profile_data.exists():
             # idを降順に並べ替え、最新のプロフィールデータを取得
             profile_data = profile_data.order_by('-id')[0]
+            # サブタイトルが未入力の場合は空文字に変換
+            # 任意項目だが、未設定の場合Noneと表示されるため
+            if profile_data.subtitle is None:
+                profile_data.subtitle = ''
         work_data = Work.objects.order_by('-id')
         return render(request, 'myapp/index.html', {
             'profile_data': profile_data,
@@ -31,13 +31,17 @@ class IndexView(View):
 
 
 class DetailView(View):
-    """作品詳細ページのビュー
-
-    """
+    """業務/作品詳細ページのビュー"""
 
     def get(self, request, *args, **kwargs):
         """get関数
 
+        Args:
+            request (HttpRequest): リクエスト
+            *args: 任意の引数
+            **kwargs:
+                pk: 取得データのID(必須)
+                任意の引数
         """
         work_data = Work.objects.get(id=self.kwargs['pk'])
         return render(request, 'myapp/detail.html', {
@@ -46,14 +50,10 @@ class DetailView(View):
 
 
 class AboutView(View):
-    """プロフィールページのビュー
-
-    """
+    """プロフィールページのビュー"""
 
     def get(self, request, *args, **kwargs):
-        """get関数
-
-        """
+        """get関数"""
         profile_data = Profile.objects.all()
         if profile_data.exists():
             profile_data = profile_data.order_by('-id')[0]
@@ -72,26 +72,17 @@ class AboutView(View):
 
 # TODO: 未使用機能
 class ContactView(View):
-    """お問い合わせページのビュー
-
-    """
+    """お問い合わせページのビュー"""
 
     def get(self, request, *args, **kwargs):
-        """get関数
-
-        お問い合わせデータを取得
-        ページ表示にコールされる
-        """
+        """get関数"""
         form = ContactForm(request.POST or None)
         return render(request, 'myapp/contact.html', {
             'form': form
         })
 
     def post(self, request, *args, **kwargs):
-        """post関数
-
-        お問い合わせデータをサーバに送信
-        """
+        """post関数"""
         form = ContactForm(request.POST or None)
 
         # フォーム内容が正しいかを判断
