@@ -74,15 +74,9 @@ body {
     color: white;
     font-weight: bold;
     padding: 0;
-    opacity: 0;
-    background-color: rgb(238, 108, 77, 0.8);
-    transform: translateY(70px);
-    transition: all 0.2s ease-in-out;
-}
-
-.work-thumbnail:hover .work-title {
-    transform: translateY(0px);
     opacity: 1;
+    background-color: rgb(238, 108, 77, 0.8);
+    transform: translateY(0px);
 }
 
 .link-color {

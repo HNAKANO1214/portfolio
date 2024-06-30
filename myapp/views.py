@@ -24,7 +24,6 @@ class IndexView(View):
             # idを降順に並べ替え、最新のプロフィールデータを取得
             profile_data = profile_data.order_by('-id')[0]
         work_data = Work.objects.order_by('-id')
-        # プロフィールデータをindex.htmlに渡す
         return render(request, 'myapp/index.html', {
             'profile_data': profile_data,
             'work_data': work_data
@@ -71,6 +70,7 @@ class AboutView(View):
         })
 
 
+# TODO: 未使用機能
 class ContactView(View):
     """お問い合わせページのビュー
 

@@ -13,7 +13,7 @@
 <div class="row mb-5">
     {% for work in work_data %}
         <div class="col-6 col-md-3 mb-3">
-            <div class="card work-thumbnail">
+            <div class="card">
                 {% if work.thumbnail %}
                     <img src="{{ work.thumbnail.url }}" alt="" class="work-img">
                 {% else %}
