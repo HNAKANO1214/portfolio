@@ -83,23 +83,26 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-if settings.DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'portfolio_db',
-            'USER': 'user',
-            'PASSWORD': 'password',
-            'HOST': 'db',
-            'PORT': 5432,
-        }
-    }
-else:
-    default_dburl = "sqlite:///" + str(BASE_DIR / "db.sqlite3")
-    DATABASES = {
-        "default": config("DATABASE_URL", default=default_dburl, cast=dburl),
-    }
+default_dburl = "sqlite:///" + str(BASE_DIR / "db.sqlite3")
+DATABASES = {
+    "default": config("DATABASE_URL", default=default_dburl, cast=dburl),
+}
+# if settings.DEBUG:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': 'portfolio_db',
+#             'USER': 'user',
+#             'PASSWORD': 'password',
+#             'HOST': 'db',
+#             'PORT': 5432,
+#         }
+#     }
+# else:
+#     default_dburl = "sqlite:///" + str(BASE_DIR / "db.sqlite3")
+#     DATABASES = {
+#         "default": config("DATABASE_URL", default=default_dburl, cast=dburl),
+#     }
 
 
 # Password validation
