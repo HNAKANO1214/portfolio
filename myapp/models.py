@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Profile(models.Model):
+    '''プロフィール'''
     title = models.CharField('タイトル', max_length=100, null=True, blank=True)
     subtitle = models.CharField(
         'サブタイトル', max_length=100, null=True, blank=True)
@@ -25,9 +26,7 @@ class Profile(models.Model):
 
 
 class Work(models.Model):
-    """作品用データ
-
-    """
+    """業務/作品"""
     title = models.CharField('タイトル', max_length=100)
     image = models.ImageField(upload_to="images", verbose_name='イメージ画像')
     thumbnail = models.ImageField(
@@ -38,16 +37,11 @@ class Work(models.Model):
     description = models.TextField('説明')
 
     def __str___(self):
-        """
-
-        """
         return self.title
 
 
 class Experience(models.Model):
-    """職歴用モデル
-
-    """
+    """職歴"""
     occupation = models.CharField('職種', max_length=100)
     company = models.CharField('会社', max_length=100)
     description = models.TextField('説明')
@@ -58,9 +52,7 @@ class Experience(models.Model):
 
 
 class Education(models.Model):
-    """学歴用モデル
-
-    """
+    """学歴"""
     course = models.CharField('コース', max_length=100)
     school = models.CharField('学校', max_length=100)
     period = models.CharField('期間', max_length=100)
@@ -70,9 +62,7 @@ class Education(models.Model):
 
 
 class Software(models.Model):
-    """ソフトウェア用モデル
-
-    """
+    """ソフトウェア"""
     name = models.CharField('ソフトウェア', max_length=100)
     level = models.CharField('レベル', max_length=100)
     percentage = models.IntegerField('パーセンテージ')
@@ -82,9 +72,7 @@ class Software(models.Model):
 
 
 class Technical(models.Model):
-    """スキル用モデル
-
-    """
+    """スキル"""
     name = models.CharField('テクニカル', max_length=100)
     level = models.CharField('レベル', max_length=100)
     percentage = models.IntegerField('パーセンテージ')
