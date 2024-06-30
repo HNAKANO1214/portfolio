@@ -10,13 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
-import environ
 import os
+import environ
 
-from django.conf import settings
-from decouple import config
-from dj_database_url import parse as dburl
 from pathlib import Path
+from dj_database_url import parse as dburl
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,7 +32,7 @@ SECRET_KEY = 'django-insecure-^%+%#h+w_ol_n38ktl6o-whv39)^a5hc-*f&-w7+k)i6!g=0hw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'portfolio-web-gjle.onrender.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -83,20 +82,20 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-default_dburl = "sqlite:///" + str(BASE_DIR / "db.sqlite3")
-DATABASES = {
-    "default": config("DATABASE_URL", default=default_dburl, cast=dburl),
-}
+# default_dburl = "sqlite:///" + str(BASE_DIR / "db.sqlite3")
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'portfolio_db',
-#         'USER': 'user',
-#         'PASSWORD': 'password',
-#         'HOST': 'db',
-#         'PORT': 5432,
-#     }
+#     "default": config("DATABASE_URL", default=default_dburl, cast=dburl),
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portfolio_db',
+        'USER': 'user',
+        'PASSWORD': 'password',
+        'HOST': 'db',
+        'PORT': 5432,
+    }
+}
 
 
 # Password validation
@@ -135,7 +134,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = str(BASE_DIR / "staticfiles")
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
