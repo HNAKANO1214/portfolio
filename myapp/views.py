@@ -13,14 +13,11 @@ from .models import Profile, Work, Experience, Education, Software, Technical
 class IndexView(View):
     """トップページのビュー
 
-    トップページのビューを記載。
-    Attributes:
     """
 
     def get(self, request, *args, **kwargs):
         """get関数
 
-        すべてのプロフィールデータを取得。
         """
         profile_data = Profile.objects.all()
         if profile_data.exists():
@@ -37,14 +34,11 @@ class IndexView(View):
 class DetailView(View):
     """作品詳細ページのビュー
 
-    作品詳細ページのビューを記載。
-    Attributes:
     """
 
     def get(self, request, *args, **kwargs):
         """get関数
 
-        作品データをを取得。
         """
         work_data = Work.objects.get(id=self.kwargs['pk'])
         return render(request, 'myapp/detail.html', {
@@ -55,14 +49,11 @@ class DetailView(View):
 class AboutView(View):
     """プロフィールページのビュー
 
-    プロフィールページのビューを記載。
-    Attributes:
     """
 
     def get(self, request, *args, **kwargs):
         """get関数
 
-        プロフィールデータを取得
         """
         profile_data = Profile.objects.all()
         if profile_data.exists():
@@ -83,8 +74,6 @@ class AboutView(View):
 class ContactView(View):
     """お問い合わせページのビュー
 
-    お問い合わせページのビューを記載。
-    Attributes:
     """
 
     def get(self, request, *args, **kwargs):
