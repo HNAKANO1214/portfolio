@@ -13,6 +13,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Rename .env_example to .env
+        run: mv .env_example .env
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
