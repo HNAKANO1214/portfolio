@@ -3,7 +3,10 @@ name: Python Tests
 on:
   push:
     branches:
-      - feature/github-action
+      - '*'
+  pull_request:
+    branches:
+      - '*'
 
 jobs:
   test:
