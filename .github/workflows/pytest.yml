@@ -22,12 +22,6 @@ jobs:
           --health-retries 5
 
     steps:
-      - name: Print working directory
-        run: pwd
-
-      - name: List files
-        run: ls -al
-
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -54,4 +48,4 @@ jobs:
 
       - name: Run tests with pytest
         run: |
-          pytest
+          pytest -s -v
