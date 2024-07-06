@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Rename .env_example to .env
-        run: mv .env_example .env
+        run: mv .env.github .env
 
       - name: Set up Python
         uses: actions/setup-python@v2
