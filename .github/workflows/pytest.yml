@@ -18,7 +18,7 @@ jobs:
           POSTGRES_PASSWORD: password
         ports:
           - 5432:5432
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+        options: --health-cmd pg_isready --health-interval 30s --health-timeout 5s --health-retries 5
 
     steps:
       - name: Checkout repository
@@ -43,7 +43,7 @@ jobs:
 
       - name: Apply migrations
         run: |
-          python manage.py migrate
+          python manage.py migrate --noinput
 
       - name: Load seed data
         run: |
