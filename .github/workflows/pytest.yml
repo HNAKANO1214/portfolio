@@ -24,10 +24,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up PostgreSQL client
-        run: |
-          sudo apt-get install postgresql-client
-
       - name: Rename .env_example to .env
         run: mv .env_example .env
 
@@ -43,7 +39,7 @@ jobs:
 
       - name: Apply migrations
         run: |
-          python manage.py migrate --noinput
+          python manage.py migrate
 
       - name: Load seed data
         run: |
