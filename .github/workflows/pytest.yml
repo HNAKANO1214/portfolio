@@ -3,15 +3,30 @@ name: Python Tests
 on:
   push:
     branches:
-      - main
+      - feature/github-action
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_DB: portfolio_db
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: password
+        ports:
+          - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: Set up PostgreSQL client
+        run: |
+          sudo apt-get install postgresql-client
 
       - name: Rename .env_example to .env
         run: mv .env_example .env
