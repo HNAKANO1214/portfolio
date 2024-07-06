@@ -3,13 +3,52 @@
         "model": "myapp.Work",
         "pk": 1,
         "fields": {
-            "title": "TEST_WORK_1",
-            "image": "images/test_image_1",
-            "thumbnail": "images/test_thumbnail_1",
-            "skill": "TEST_SKILL_1",
-            "url": "https://www.test_url_1.com",
-            "created": "2021-01-01",
-            "description": "TEST_DESCRIPTION_1"
+            "title": "ダミー1",
+            "image": "images/image.jpg",
+            "thumbnail": "images/thumbnail.jpg",
+            "skill": "ダミー / ダミー",
+            "url": null,
+            "created": "2000-01-01",
+            "description": "ダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー"
+        }
+    },
+    {
+        "model": "myapp.Work",
+        "pk": 2,
+        "fields": {
+            "title": "ダミー2",
+            "image": "images/image.jpg",
+            "thumbnail": "images/thumbnail.jpg",
+            "skill": "ダミー / ダミー",
+            "url": null,
+            "created": "2000-01-01",
+            "description": "ダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー"
+        }
+    },
+    {
+        "model": "myapp.Work",
+        "pk": 3,
+        "fields": {
+            "title": "ダミー3",
+            "image": "images/image.jpg",
+            "thumbnail": "images/thumbnail.jpg",
+            "skill": "ダミー / ダミー",
+            "url": null,
+            "created": "2000-01-01",
+            "description": "ダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー"
+        }
+    },
+    {
+        "model": "myapp.Work",
+        "pk": 4,
+        "fields": {
+            "title": "ダミー4",
+            "image": "images/image.jpg",
+            "thumbnail": "images/thumbnail.jpg",
+            "skill": "ダミー / ダミー",
+            "url": null,
+            "created": "2000-01-01",
+            "description": "ダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー"
         }
     }
 ]

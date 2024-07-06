@@ -1,0 +1,20 @@
+[
+    {
+        "model": "myapp.Profile",
+        "pk": 1,
+        "fields": {
+            "title": "Dummy's profile",
+            "subtitle": null,
+            "name": "ダミー ダミー",
+            "job": "ITエンジニア",
+            "introduction": "ダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー",
+            "github": null,
+            "twitter": null,
+            "linkedin": null,
+            "facebook": null,
+            "instagram": null,
+            "topimage": "images/image.jpg",
+            "subimage": "images/image_profile.jpg"
+        }
+    }
+]

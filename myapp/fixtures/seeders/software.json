@@ -1,0 +1,20 @@
+[
+    {
+        "model": "myapp.Software",
+        "pk": 1,
+        "fields": {
+            "name": "アジャイル開発",
+            "level": "上級",
+            "percentage": 100
+        }
+    },
+    {
+        "model": "myapp.Software",
+        "pk": 2,
+        "fields": {
+            "name": "ウォーターフォール開発",
+            "level": "中級",
+            "percentage": 70
+        }
+    }
+]

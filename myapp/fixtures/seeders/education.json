@@ -1,0 +1,11 @@
+[
+    {
+        "model": "myapp.Education",
+        "pk": 1,
+        "fields": {
+            "course": "ダミー学科",
+            "school": "ダミー大学",
+            "period": "2000-04-01 - 2003-03-31"
+        }
+    }
+]
