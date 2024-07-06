@@ -4,7 +4,7 @@ import sys
 import django
 from django.core.management import call_command
 
-# sys.path.append('/app')
+sys.path.append('/home/runner/work/portfolio/portfolio')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
 django.setup()
 
