@@ -1,3 +1,5 @@
+from dj_database_url import parse
+
 from .base import *     # noqa: F401, F403
 from .base import env, MIDDLEWARE
 
@@ -10,7 +12,7 @@ SECRET_KEY = env('SECRET_KEY')
 env.list('ALLOWED_HOSTS')
 
 DATABASES = {
-    "default": env("DATABASE_URL"),
+    "default": parse(env("DATABASE_URL")),
 }
 
 MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
