@@ -26,7 +26,7 @@
                         {{ work.title }}
                     </a>
                 </div>
-                <a href="{% url 'detail' work.id %}" class="stretched-link work"></a>
+                <a href="{% url 'myapp:detail' work.id %}" class="stretched-link work"></a>
             </div>
         </div>
     {% endfor%}

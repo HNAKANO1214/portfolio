@@ -25,12 +25,12 @@
                     <a href="/" class="nav-link nav-color">ホーム</a>
                 </li>
                 <li class=""nav-item mr-3>
-                    <a href="{% url 'about' %}" class="nav-link nav-color">自己紹介</a>
+                    <a href="{% url 'myapp:about' %}" class="nav-link nav-color">自己紹介</a>
                 </li>
                 <!-- TODO: Contact Page is Pending -->
                 {% comment %}
                 <li class=""nav-item mr-3>
-                    <a href="{% url 'contact' %}" class="nav-link nav-color">お問い合わせ</a>
+                    <a href="{% url 'myapp:contact' %}" class="nav-link nav-color">お問い合わせ</a>
                 </li>
                 {% endcomment %}
             </ul>

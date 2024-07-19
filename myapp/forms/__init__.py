@@ -1,1 +1,1 @@
-from .contact import ContactForm
+from .contact import ContactForm    # noqa: F401
