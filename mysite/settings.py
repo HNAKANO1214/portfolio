@@ -83,7 +83,7 @@ if not DEBUG:
     # 本番用
     default_dburl = "sqlite:///" + str(BASE_DIR / "db.sqlite3")
     DATABASES = {
-        "default": config("DATABASE_URL", default=default_dburl, cast=dburl),
+        "default": dburl(env("DATABASE_URL", default=default_dburl)),
     }
 else:
     # 開発用
