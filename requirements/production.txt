@@ -1,0 +1,4 @@
+# Include base dependencies
+-r base.txt
+
+whitenoise==6.2.0
