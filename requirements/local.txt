@@ -1,0 +1,4 @@
+# Include base dependencies
+-r base.txt
+
+django_debug_toolbar==4.4.6

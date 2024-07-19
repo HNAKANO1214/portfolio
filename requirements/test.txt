@@ -1,0 +1,4 @@
+# Include base dependencies
+-r base.txt
+
+pytest-django==4.8.0
