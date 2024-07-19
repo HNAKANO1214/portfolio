@@ -2,15 +2,6 @@ import firebase_admin
 from firebase_admin import credentials, storage
 from django.core.files.storage import Storage
 
-firebase_credentials: dict = {
-    'apiKey': "AIzaSyD05stI5KKqqsmpqS2u_X3dN78CEQ-a9uE",
-    'authDomain': "portfolio-374b7.firebaseapp.com",
-    'projectId': "portfolio-374b7",
-    'storageBucket': "portfolio-374b7.appspot.com",
-    'messagingSenderId': "717861234923",
-    'appId': "1:717861234923:web:5b9dc00981e8f5f99bf6ae"
-}
-
 # Firebase の初期化
 cred = credentials.Certificate(
     '/etc/secrets/portfolio-374b7-firebase-adminsdk-lcwys-3097d4d29f.json'
