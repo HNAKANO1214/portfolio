@@ -1,5 +1,5 @@
 from .base import *     # noqa: F401, F403
-from .base import env
+from .base import env, MIDDLEWARE
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -12,3 +12,6 @@ env.list('ALLOWED_HOSTS')
 DATABASES = {
     "default": env("DATABASE_URL"),
 }
+
+MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
