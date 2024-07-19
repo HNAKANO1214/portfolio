@@ -23,17 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, ".env"))
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = env('DEBUG')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^%+%#h+w_ol_n38ktl6o-whv39)^a5hc-*f&-w7+k)i6!g=0hw'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
-
+SECRET_KEY = env('SECRET_KEY')
 
 # Application definition
 
@@ -82,20 +79,24 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-# default_dburl = "sqlite:///" + str(BASE_DIR / "db.sqlite3")
-# DATABASES = {
-#     "default": config("DATABASE_URL", default=default_dburl, cast=dburl),
-# }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env("POSTGRES_DB"),
-        'USER': env("POSTGRES_USER"),
-        'PASSWORD': env("POSTGRES_PASSWORD"),
-        'HOST': env("POSTGRES_HOST"),
-        'PORT': env("POSTGRES_PORT"),
+if not DEBUG:
+    # 本番用
+    default_dburl = "sqlite:///" + str(BASE_DIR / "db.sqlite3")
+    DATABASES = {
+        "default": config("DATABASE_URL", default=default_dburl, cast=dburl),
     }
-}
+else:
+    # 開発用
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': env("POSTGRES_DB"),
+            'USER': env("POSTGRES_USER"),
+            'PASSWORD': env("POSTGRES_PASSWORD"),
+            'HOST': env("POSTGRES_HOST"),
+            'PORT': env("POSTGRES_PORT"),
+        }
+    }
 
 
 # Password validation
@@ -160,3 +161,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SUPERUSER_NAME = env("SUPERUSER_NAME")
 SUPERUSER_EMAIL = env("SUPERUSER_EMAIL")
 SUPERUSER_PASSWORD = env("SUPERUSER_PASSWORD")
+
+
+# django-debug-toolbarの設定
+if DEBUG:
+    INSTALLED_APPS += ['debug_toolbar']
+    MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware']
+    INTERNAL_IPS = ['127.0.0.1']
+    DEBUG_TOOLBAR_CONFIG = {
+        "SHOW_TOOLBAR_CALLBACK": lambda request: True,
+    }
