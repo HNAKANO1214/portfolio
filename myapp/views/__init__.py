@@ -1,4 +1,4 @@
-from myapp.views import top_page as TopPageView     # noqa: F401
-from myapp.views import detail as DetailView        # noqa: F401
-from myapp.views import about as AboutView          # noqa: F401
-from myapp.views import contact as ContactView      # noqa: F401
+from .top_page import TopPageView       # noqa: F401
+from .detail import DetailView          # noqa: F401
+from .about import AboutView            # noqa: F401
+from .contact import ContactView        # noqa: F401

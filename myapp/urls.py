@@ -6,9 +6,9 @@ from myapp.views import AboutView
 # from myapp.views import ContactView
 
 urlpatterns = [
-    path('', TopPageView.TopPageView.as_view(), name='top_page'),
-    path('detail/<int:pk>', DetailView.DetailView.as_view(), name='detail'),
-    path('about/', AboutView.AboutView.as_view(), name='about'),
+    path('', TopPageView.as_view(), name='top_page'),
+    path('detail/<int:pk>', DetailView.as_view(), name='detail'),
+    path('about/', AboutView.as_view(), name='about'),
     # TODO: Pending
-    # path('contact/', ContactView.ContactView.as_view(), name='contact'),
+    # path('contact/', ContactView.as_view(), name='contact'),
 ]

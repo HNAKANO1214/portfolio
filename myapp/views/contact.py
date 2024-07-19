@@ -6,7 +6,7 @@ from django.conf import settings
 from django.core.mail import BadHeaderError, EmailMessage
 from django.http import HttpResponse
 
-from ..forms import ContactForm
+from myapp.forms import ContactForm
 
 
 # TODO: 未使用機能
