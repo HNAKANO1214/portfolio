@@ -17,4 +17,8 @@ DATABASES = {
 
 MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
 
+DEFAULT_FILE_STORAGE = 'myapp.storage_backends.FirebaseStorage'
+MEDIA_URL = 'https://storage.googleapis.com/portfolio-374b7.appspot.com/'
+MEDIA_ROOT = None
+
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
