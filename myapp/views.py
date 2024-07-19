@@ -7,7 +7,7 @@ from django.core.mail import BadHeaderError, EmailMessage
 from django.http import HttpResponse
 
 from .forms import ContactForm
-from .models import Profile, Work, Experience, Education, Software, Technical
+from myapp.models import Profile, Work, Experience, Education, Software, Technical
 
 
 class IndexView(View):
