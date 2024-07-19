@@ -7,17 +7,17 @@ from django.urls import reverse
 def test_index_view_get(client: Client, db):
     '''Test index view get method'''
     # IndexViewのgetの結果が200化を確認する
-    response = client.get(reverse('index'))
+    response = client.get(reverse('myapp:top_page'))
     assert response.status_code == 200
 
 
 def test_detail_view_get(client: Client, db):
     '''Test detail view get method'''
-    response = client.get(reverse('detail', kwargs={'pk': 1}))
+    response = client.get(reverse('myapp:detail', kwargs={'pk': 1}))
     assert response.status_code == 200
 
 
 def test_about_view_get(client: Client, db):
     '''Test about view get method'''
-    response = client.get(reverse('about'))
+    response = client.get(reverse('myapp:about'))
     assert response.status_code == 200
