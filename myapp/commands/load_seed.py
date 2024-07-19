@@ -2,9 +2,13 @@
 import os
 import sys
 import django
+
+from dotenv import load_dotenv
+
 from django.core.management import call_command
 
 sys.path.append(os.getcwd())
+load_dotenv()
 os.environ.setdefault(
     'DJANGO_SETTINGS_MODULE', os.environ.get('DJANGO_SETTINGS_MODULE', 'mysite.settings.local')
 )
