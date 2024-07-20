@@ -1,13 +1,17 @@
 from django.conf import settings
 from django.contrib import admin
-from .models import Education, Experience, Profile, Work, Software, Technical
+from image_cropping import ImageCroppingMixin
+
+from myapp.forms import ProfileForm
+from myapp.models import Education, Experience, Profile, Work, Software, Technical
 
 
 admin.site.site_header = f'{settings.SITE_TITLE} 管理サイト'
 admin.site.index_title = 'モデル管理'
 
 
-class ProfileAdmin(admin.ModelAdmin):
+class ProfileAdmin(ImageCroppingMixin, admin.ModelAdmin):
+    form = ProfileForm
     list_display = ('id', 'title', 'name')
 
 
