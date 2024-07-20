@@ -10,7 +10,7 @@ from django.core.management import call_command
 sys.path.append(os.getcwd())
 load_dotenv()
 os.environ.setdefault(
-    'DJANGO_SETTINGS_MODULE', os.environ.get('DJANGO_SETTINGS_MODULE', 'settings.local')
+    'DJANGO_SETTINGS_MODULE', os.environ.get('DJANGO_SETTINGS_MODULE', 'config.settings.local')
 )
 django.setup()
 
