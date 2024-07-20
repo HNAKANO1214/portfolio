@@ -4,7 +4,7 @@ import time
 
 
 def send_request():
-    url = "https://portfolio-web-gjle.onrender.com/"
+    url = "https://portfolio-web-gjle.onrender.com/dummy_request/"
     try:
         response = requests.get(url)
         print(f"Status Code: {response.status_code}")
