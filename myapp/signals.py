@@ -1,7 +1,10 @@
+from django.conf import settings
 from django.db.models.signals import pre_save, post_delete
 from django.dispatch import receiver
 from django.apps import apps
 from django.db import models
+
+from myapp.utils import delete_blob
 
 
 def get_image_fields(instance):
@@ -22,7 +25,10 @@ def delete_old_images(sender, instance, **kwargs):
         old_file = getattr(old_instance, field.name)
         new_file = getattr(instance, field.name)
         if old_file and old_file != new_file:
-            old_file.delete(save=False)
+            if settings.DEBUG:
+                old_file.delete(save=False)
+            else:
+                delete_blob(settings.FIREBASE_STORAGE_BUCKET, old_file.name)
 
 
 @receiver(post_delete)
@@ -30,7 +36,10 @@ def delete_images_on_delete(sender, instance, **kwargs):
     for field in get_image_fields(instance):
         image_file = getattr(instance, field.name)
         if image_file:
-            image_file.delete(save=False)
+            if settings.DEBUG:
+                image_file.delete(save=False)
+            else:
+                delete_blob(settings.FIREBASE_STORAGE_BUCKET, image_file.name)
 
 
 def register_signals():

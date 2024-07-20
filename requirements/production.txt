@@ -1,6 +1,4 @@
 # Include base dependencies
 -r base.txt
 
-dj-database-url==1.0.0
-firebase-admin==6.5.0
 whitenoise==6.2.0

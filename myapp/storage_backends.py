@@ -1,14 +1,12 @@
 import firebase_admin
+
 from firebase_admin import credentials, storage
 from django.core.files.storage import Storage
+from django.conf import settings
 
 # Firebase の初期化
-cred = credentials.Certificate(
-    '/etc/secrets/portfolio-374b7-firebase-adminsdk-lcwys-3097d4d29f.json'
-)
-firebase_admin.initialize_app(cred, {
-    'storageBucket': 'portfolio-374b7.appspot.com'
-})
+cred = credentials.Certificate(settings.FIREBASE_AUTH_JSON)
+firebase_admin.initialize_app(cred, {'storageBucket': settings.FIREBASE_STORAGE_BUCKET})
 
 
 class FirebaseStorage(Storage):
