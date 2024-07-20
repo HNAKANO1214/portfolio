@@ -1,0 +1,19 @@
+{% extends "admin/change_form.html" %}
+
+{% load static %}
+
+{% block extrahead %}
+    {{ block.super }}
+
+    <!-- jQuery の読み込み -->
+    <script src="{% static 'admin/js/vendor/jquery/jquery.js' %}"></script>
+
+    <!-- image_cropping の CSS と JS の読み込み -->
+    <link rel="stylesheet" type="text/css" href="{% static 'image_cropping/css/image_cropping.css' %}">
+    <script src="{% static 'image_cropping/js/src/image_cropping.js' %}"></script>
+    {{ form.media }}
+{% endblock %}
+
+{% block content %}
+    {{ block.super }}
+{% endblock %}
