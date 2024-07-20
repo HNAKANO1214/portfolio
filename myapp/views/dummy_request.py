@@ -5,9 +5,9 @@ from django.views import View
 class DummyRequestView(View):
     """ダミーリクエストビュー
 
-        Renderの無料版は15分リクエストがないとスリープするため、
-        ダミーリクエストを受信するAPIを作成
-        空のJSONレスポンスを返却する
+        空のレスポンスを返却
+        renderの休眠対策として定期的にリクエストを送信する仕組みを採用しているが、
+        可能な限り通信量を減らすためのAPIとして利用する
     """
 
     def get(self, request, *args, **kwargs):
