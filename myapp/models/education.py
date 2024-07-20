@@ -9,3 +9,7 @@ class Education(models.Model):
 
     def __str__(self):
         return self.course
+
+    class Meta:
+        verbose_name = '学歴'
+        verbose_name_plural = '学歴'

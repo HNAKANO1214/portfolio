@@ -9,3 +9,7 @@ class Technical(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = 'スキル'
+        verbose_name_plural = 'スキル'

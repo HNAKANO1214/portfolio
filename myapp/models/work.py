@@ -12,5 +12,9 @@ class Work(models.Model):
     created = models.DateField('作成日')
     description = models.TextField('説明')
 
-    def __str___(self):
+    def __str__(self):
         return self.title
+
+    class Meta:
+        verbose_name = '業務/作品'
+        verbose_name_plural = '業務/作品'

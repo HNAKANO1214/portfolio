@@ -9,3 +9,7 @@ class Software(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = 'ソフトウェア'
+        verbose_name_plural = 'ソフトウェア'

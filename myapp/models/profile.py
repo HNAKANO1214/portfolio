@@ -22,4 +22,8 @@ class Profile(models.Model):
     subimage = models.ImageField(upload_to='images', verbose_name='サブ画像')
 
     def __str__(self):
-        return self.name
+        return self.title
+
+    class Meta:
+        verbose_name = 'プロフィール'
+        verbose_name_plural = 'プロフィール'

@@ -10,3 +10,7 @@ class Experience(models.Model):
 
     def __str__(self):
         return self.occupation
+
+    class Meta:
+        verbose_name = '職歴'
+        verbose_name_plural = '職歴'
