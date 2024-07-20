@@ -4,8 +4,8 @@
         "pk": 1,
         "fields": {
             "title": "ダミー1",
-            "image": "images/image.jpg",
-            "thumbnail": "images/thumbnail.jpg",
+            "image": "images/image_work_01.jpg",
+            "thumbnail": "images/thumbnail_work_01.jpg",
             "skill": "ダミー / ダミー",
             "url": null,
             "created": "2000-01-01",
@@ -17,8 +17,8 @@
         "pk": 2,
         "fields": {
             "title": "ダミー2",
-            "image": "images/image.jpg",
-            "thumbnail": "images/thumbnail.jpg",
+            "image": "images/image_work_02.jpg",
+            "thumbnail": "images/thumbnail_work_02.jpg",
             "skill": "ダミー / ダミー",
             "url": null,
             "created": "2000-01-01",
@@ -30,8 +30,8 @@
         "pk": 3,
         "fields": {
             "title": "ダミー3",
-            "image": "images/image.jpg",
-            "thumbnail": "images/thumbnail.jpg",
+            "image": "images/image_work_03.jpg",
+            "thumbnail": "images/thumbnail_work_03.jpg",
             "skill": "ダミー / ダミー",
             "url": null,
             "created": "2000-01-01",
@@ -43,8 +43,8 @@
         "pk": 4,
         "fields": {
             "title": "ダミー4",
-            "image": "images/image.jpg",
-            "thumbnail": "images/thumbnail.jpg",
+            "image": "images/image_work_04.jpg",
+            "thumbnail": "images/thumbnail_work_04.jpg",
             "skill": "ダミー / ダミー",
             "url": null,
             "created": "2000-01-01",

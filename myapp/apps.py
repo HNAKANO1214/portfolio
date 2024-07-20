@@ -9,6 +9,7 @@ class MyappConfig(AppConfig):
     name = 'myapp'
 
     def ready(self):
+        import myapp.signals        # noqa: F401
         super().ready()
 
         # Render休眠対策 10分に1回ダミーリクエストを送信

@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
 
 
 class Profile(models.Model):
@@ -27,3 +29,33 @@ class Profile(models.Model):
     class Meta:
         verbose_name = 'プロフィール'
         verbose_name_plural = 'プロフィール'
+
+    def delete(self, *args, **kwargs):
+        if self.topimage:
+            self.topimage.delete(save=False)
+        if self.subimage:
+            self.subimage.delete(save=False)
+        super().delete(*args, **kwargs)
+
+
+@receiver(post_save, sender=Profile)
+def delete_old_image(sender, instance, **kwargs):
+    if instance.pk:
+        try:
+            old_topimage = Profile.objects.get(pk=instance.pk).topimage
+            old_subimage = Profile.objects.get(pk=instance.pk).subimage
+        except Profile.DoesNotExist:
+            return
+        else:
+            if old_topimage != instance.topimage:
+                old_topimage.delete(save=False)
+            if old_subimage != instance.subimage:
+                old_subimage.delete(save=False)
+
+
+@receiver(post_delete, sender=Profile)
+def delete_image_on_delete(sender, instance, **kwargs):
+    if instance.topimage:
+        instance.topimage.delete(save=False)
+    if instance.subimage:
+        instance.subimage.delete(save=False)

@@ -13,8 +13,8 @@
             "linkedin": null,
             "facebook": null,
             "instagram": null,
-            "topimage": "images/image.jpg",
-            "subimage": "images/image_profile.jpg"
+            "topimage": "images/top.jpg",
+            "subimage": "images/profile.jpg"
         }
     }
 ]

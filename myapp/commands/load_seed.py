@@ -1,7 +1,8 @@
 
-import os
-import sys
 import django
+import os
+import shutil
+import sys
 
 from dotenv import load_dotenv
 
@@ -33,5 +34,22 @@ def load_seed_data():
     print('Seed data loaded.')
 
 
+def load_images():
+    print('Loading images...')
+    # media/images/ が存在しない場合は作成
+    if not os.path.exists('media/images'):
+        os.makedirs('media/images')
+    for image in os.listdir('myapp/fixtures/seeders/images'):
+        print(f'Loading {image}...')
+        # 同じファイル名がある場合はスキップ
+        if os.path.exists(f'media/images/{image}'):
+            print(f'{image} already exists. Skipped.')
+            continue
+        shutil.copyfile(f'myapp/fixtures/seeders/images/{image}', f'media/images/{image}')
+        print(f'{image} loaded.')
+    print('Images loaded.')
+
+
 if __name__ == '__main__':
     load_seed_data()
+    load_images()
