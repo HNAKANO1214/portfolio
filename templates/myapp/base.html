@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
     <title>{{ SITE_TITLE }}</title>
-    <link rel="icon" href="{{ MEDIA_URL }}images/favicon.ico">
+    <link rel="icon" href="{% static 'myapp/images/favicon.ico' %}"">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a href="/" class="navbar-brand">
                 <!-- TODO: Logo is Pending -->
-                <img src="{{ MEDIA_URL }}images/logo.jpg" alt="Logo" width="60" height="60">
+                <img src="{% static 'myapp/images/logo.jpg' %}" alt="Logo" width="60" height="60">
             </a>
             <ul class="navbar-nav">
                 <li class=""nav-item mr-3>
