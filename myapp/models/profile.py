@@ -25,7 +25,7 @@ class Profile(models.Model):
     order = models.IntegerField('表示順序', default=0)
 
     def __str__(self):
-        return self.title
+        return self.name
 
     class Meta:
         verbose_name = 'プロフィール'
