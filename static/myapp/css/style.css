@@ -77,11 +77,59 @@ body {
     padding: 0;
     opacity: 0;
     background-color: rgb(238, 108, 77, 0.8);
-    transform: translateY(70px);
     transition: all 0.2s ease-in-out;
 }
 
 .work-thumbnail:hover .work-title {
     transform: translateY(0px);
     opacity: 1;
+}
+
+.link-color {
+    color: #EE6C4D;
+}
+
+.link-color:hover {
+    color: #C56C55;
+    text-decoration: none;
+}
+
+.avatar img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.icon {
+    padding: 10px 8px;
+}
+
+.star-rating {
+    position: relative;
+    font-size: 30px;
+    word-wrap: normal!important;
+}
+
+.star-rating-star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: #EE6C4D;
+}
+
+.star-rating-back {
+    color: #ccc;
+}
+
+.contact {
+    max-width: 500px;
+}
+
+.form-control:focus {
+    border-color: #EE6C4D;
+    box-shadow: none;
+}
+
+.card {
+    border: none;
 }
