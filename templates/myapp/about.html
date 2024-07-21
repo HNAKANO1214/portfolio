@@ -75,7 +75,11 @@
     <div class="row">
         {% for software in software_data %}
             <div class="col-6 col-md3">
-                <h5 class="mb-0">{{ software.name }}<span class="small.secondary"> - {{ software.level }}</span></h5>
+                <h5 class="mb-0">{{ software.name }}
+                    {% if software.level %}
+                        <span class="small.secondary"> - {{ software.level }}</span>
+                    {% endif %}
+                </h5>
                 <div class="d-flex flex-row">
                     <div class="star-rating">
                         <div class="star-rating-star" style="width: {{ software.percentage }}%">★★★★★</div>
@@ -92,7 +96,11 @@
     <div class="row">
         {% for Technical in technical_data %}
             <div class="col-6 col-md3">
-                <h5 class="mb-0">{{ Technical.name }}<span class="small.secondary"> - {{ Technical.level }}</span></h5>
+                <h5 class="mb-0">{{ Technical.name }}
+                    {% if Technical.level %}
+                        <span class="small.secondary"> - {{ Technical.level }}</span>
+                    {% endif %}
+                </h5>
                 <div class="d-flex flex-row">
                     <div class="star-rating">
                         <!-- ％によって星の数を変更 -->
