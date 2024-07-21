@@ -132,4 +132,15 @@ body {
 
 .card {
     border: none;
+    border-radius: 0.5rem;      /* カード全体の角を丸くする */
+    overflow: hidden;           /* 子要素が角からはみ出さないようにする */
+}
+
+.card img {
+    border-radius: 0.5rem;      /* 画像の角も丸くする */
+}
+
+/* オプション: カード内のオーバーレイの角も丸くする場合 */
+.overlay {
+    border-radius: 0.5rem;      /* オーバーレイの角を丸くする */
 }
