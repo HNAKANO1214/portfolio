@@ -22,7 +22,7 @@
 <div class="row mb-5">
     {% for work in work_data %}
         <div class="col-6 col-md-3 mb-3">
-            <div class="card">
+            <div class="card work-thumbnail">
                 {% if work.thumbnail %}
                     <img src="{{ work.thumbnail.url }}" alt="" class="work-img">
                 {% else %}
@@ -33,7 +33,9 @@
                         {{ work.title }}
                     </a>
                 </div>
-                <a href="{% url 'myapp:detail' work.id %}" class="stretched-link work"></a>
+                {% if work.description %}
+                    <a href="{% url 'myapp:detail' work.id %}" class="stretched-link work"></a>
+                {% endif %}
             </div>
         </div>
     {% endfor%}
