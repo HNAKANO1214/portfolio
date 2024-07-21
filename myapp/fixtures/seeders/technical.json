@@ -5,7 +5,8 @@
         "fields": {
             "name": "C言語",
             "level": "最適なコーディングと指導が可能",
-            "percentage": 100
+            "percentage": 100,
+            "order": 2
         }
     },
     {
@@ -14,7 +15,8 @@
         "fields": {
             "name": "JAVA",
             "level": "最適なコーディングが可能",
-            "percentage": 80
+            "percentage": 80,
+            "order": 1
         }
     }
 ]

@@ -4,8 +4,19 @@
         "pk": 1,
         "fields": {
             "course": "ダミー学科",
-            "school": "ダミー大学",
-            "period": "2000-04-01 - 2003-03-31"
+            "school": "ダミー大学1",
+            "period": "2004-04-01 - 2007-03-31",
+            "order": 2
+        }
+    },
+    {
+        "model": "myapp.Education",
+        "pk": 2,
+        "fields": {
+            "course": "ダミー学科",
+            "school": "ダミー大学2",
+            "period": "2000-04-01 - 2003-03-31",
+            "order": 1
         }
     }
 ]

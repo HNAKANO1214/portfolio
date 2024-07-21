@@ -11,6 +11,7 @@ class Work(models.Model):
     url = models.CharField('URL', max_length=100, null='True', blank='True')
     created = models.DateField('作成日')
     description = models.TextField('説明')
+    order = models.IntegerField('表示順序', default=0)
 
     def __str__(self):
         return self.title

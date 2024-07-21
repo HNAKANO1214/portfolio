@@ -7,6 +7,7 @@ class Experience(models.Model):
     company = models.CharField('会社', max_length=100)
     description = models.TextField('説明')
     period = models.CharField('期間', max_length=100)
+    order = models.IntegerField('表示順序', default=0)
 
     def __str__(self):
         return self.occupation

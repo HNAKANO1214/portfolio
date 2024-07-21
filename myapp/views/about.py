@@ -12,10 +12,10 @@ class AboutView(View):
         profile_data = Profile.objects.all()
         if profile_data.exists():
             profile_data = profile_data.order_by('-id')[0]
-        experience_data = Experience.objects.order_by('-id')
-        education_data = Education.objects.order_by('-id')
-        software_data = Software.objects.order_by('-id')
-        technical_data = Technical.objects.order_by('-id')
+        experience_data = Experience.objects.order_by('-order', '-id')
+        education_data = Education.objects.order_by('-order', '-id')
+        software_data = Software.objects.order_by('-order', '-id')
+        technical_data = Technical.objects.order_by('-order', '-id')
         return render(request, 'myapp/about.html', {
             'profile_data': profile_data,
             'experience_data': experience_data,

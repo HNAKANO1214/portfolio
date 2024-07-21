@@ -5,7 +5,8 @@
         "fields": {
             "name": "アジャイル開発",
             "level": "上級",
-            "percentage": 100
+            "percentage": 100,
+            "order": 2
         }
     },
     {
@@ -14,7 +15,8 @@
         "fields": {
             "name": "ウォーターフォール開発",
             "level": "中級",
-            "percentage": 70
+            "percentage": 70,
+            "order": 1
         }
     }
 ]

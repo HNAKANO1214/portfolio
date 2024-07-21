@@ -22,6 +22,7 @@ class Profile(models.Model):
         'instagram', max_length=100, null=True, blank=True)
     topimage = models.ImageField(upload_to='images', verbose_name='トップ画像')
     subimage = models.ImageField(upload_to='images', verbose_name='サブ画像')
+    order = models.IntegerField('表示順序', default=0)
 
     def __str__(self):
         return self.title
