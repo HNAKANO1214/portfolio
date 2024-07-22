@@ -144,3 +144,48 @@ body {
 .overlay {
     border-radius: 0.5rem;      /* オーバーレイの角を丸くする */
 }
+
+/* ドロップダウンメニューの幅を調整 */
+.dropdown-menu {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa; /* 背景色 */
+    min-width: 150px; /* 最小幅を指定（必要に応じて調整） */
+    width: auto; /* 自動幅を指定 */
+}
+
+/* その他のスタイル */
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    color: #212529; /* リンクの文字色を設定 */
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    background-color: #e9ecef; /* ホバー時の背景色 */
+    color: #000; /* ホバー時の文字色 */
+}
+
+.dropdown-item img {
+    width: 20px; /* アイコンのサイズを調整 */
+    height: auto;
+    margin-right: 4px; /* 画像とテキストの間隔を調整 */
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* フォントサイズを調整 */
+    color: #000; /* ドロップダウンボタンの文字色を設定 */
+}
+
+.dropdown-toggle .material-symbols-outlined {
+    font-size: 20px; /* アイコンのサイズを調整 */
+    margin-right: 2px; /* アイコンとテキストの間隔を調整 */
+}
+
+.dropdown-toggle::after {
+    display: none; /* ドロップダウンアイコンを非表示にする */
+}
