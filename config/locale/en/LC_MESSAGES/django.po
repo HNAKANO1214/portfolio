@@ -36,7 +36,7 @@ msgstr "Software Skills"
 
 #: templates/myapp/about.html:96
 msgid "テクニカルスキル"
-msgstr "Technical Skill"
+msgstr "Technical Skills"
 
 #: templates/myapp/base.html:26
 msgid "ホーム"

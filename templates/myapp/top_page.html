@@ -2,8 +2,15 @@
 
 {% load i18n %}
 
-{% block content %}
+{% block top_content %}
+{% if not has_seen_animation %}
+    <div id="splash">
+        <div id="splash_text"></div>
+    </div>
+{% endif %}
+{% endblock %}
 
+{% block content %}
 <div class="card top d-flex flex-column justify-content-end mb-4">
     <img src="{{ profile_data.topimage.url }}"
          alt=""
@@ -40,5 +47,10 @@
         </div>
     {% endfor%}
 </div>
+{% endblock %}
 
+{% block extra_js %}
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 {% endblock %}
