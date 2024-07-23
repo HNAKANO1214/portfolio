@@ -4,10 +4,11 @@
         "pk": 1,
         "fields": {
             "occupation": "ITエンジニア",
-            "company": "ダミー株式会社1",
-            "description": "ダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー",
+            "company": "サンプル1株式会社",
+            "description": "サンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル",
             "period": "2004-04-01 - 2007-03-31",
-            "order": 2
+            "order": 2,
+            "language": "ja"
         }
     },
     {
@@ -15,10 +16,35 @@
         "pk": 2,
         "fields": {
             "occupation": "ITエンジニア",
-            "company": "ダミー株式会社2",
-            "description": "ダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー",
+            "company": "サンプル2株式会社",
+            "description": "サンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル",
             "period": "2000-04-01 - 2003-03-31",
-            "order": 1
+            "order": 1,
+            "language": "ja"
+        }
+    },
+    {
+        "model": "myapp.Experience",
+        "pk": 3,
+        "fields": {
+            "occupation": "IT Engineer",
+            "company": "Sample1 Inc.",
+            "description": "SampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample",
+            "period": "Apr. 01, 2004 - Mar. 31, 2007",
+            "order": 2,
+            "language": "en"
+        }
+    },
+    {
+        "model": "myapp.Experience",
+        "pk": 4,
+        "fields": {
+            "occupation": "IT Engineer",
+            "company": "Sample2 Inc.",
+            "description": "SampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample",
+            "period": "Apr. 01, 2000 - Mar. 31, 2003",
+            "order": 1,
+            "language": "en"
         }
     }
 ]

@@ -6,7 +6,8 @@
             "name": "アジャイル開発",
             "level": "上級",
             "percentage": 100,
-            "order": 2
+            "order": 2,
+            "language": "ja"
         }
     },
     {
@@ -16,7 +17,30 @@
             "name": "ウォーターフォール開発",
             "level": "中級",
             "percentage": 70,
-            "order": 1
+            "order": 1,
+            "language": "ja"
+        }
+    },
+    {
+        "model": "myapp.Software",
+        "pk": 3,
+        "fields": {
+            "name": "Agile Development",
+            "level": "Senior",
+            "percentage": 100,
+            "order": 2,
+            "language": "en"
+        }
+    },
+    {
+        "model": "myapp.Software",
+        "pk": 4,
+        "fields": {
+            "name": "Waterfall Development",
+            "level": "Intermediate",
+            "percentage": 70,
+            "order": 1,
+            "language": "en"
         }
     }
 ]

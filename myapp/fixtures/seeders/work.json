@@ -3,56 +3,120 @@
         "model": "myapp.Work",
         "pk": 1,
         "fields": {
-            "title": "ダミー1",
+            "title": "サンプル1",
             "image": "images/image_work_01.jpg",
             "thumbnail": "images/thumbnail_work_01.jpg",
-            "skill": "ダミー / ダミー",
+            "skill": "サンプル / サンプル",
             "url": null,
             "created": "2000-01-01",
-            "description": "ダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー",
-            "order": 4
+            "description": "サンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプル",
+            "order": 4,
+            "language": "ja"
         }
     },
     {
         "model": "myapp.Work",
         "pk": 2,
         "fields": {
-            "title": "ダミー2",
+            "title": "サンプル2",
             "image": "images/image_work_02.jpg",
             "thumbnail": "images/thumbnail_work_02.jpg",
-            "skill": "ダミー / ダミー",
+            "skill": "サンプル / サンプル",
             "url": null,
             "created": "2000-01-01",
-            "description": "ダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー",
-            "order": 3
+            "description": "サンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル",
+            "order": 3,
+            "language": "ja"
         }
     },
     {
         "model": "myapp.Work",
         "pk": 3,
         "fields": {
-            "title": "ダミー3",
+            "title": "サンプル3",
             "image": "images/image_work_03.jpg",
             "thumbnail": "images/thumbnail_work_03.jpg",
-            "skill": "ダミー / ダミー",
+            "skill": "サンプル / サンプル",
             "url": null,
             "created": "2000-01-01",
-            "description": "ダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー",
-            "order": 2
+            "description": "サンプルサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル",
+            "order": 2,
+            "language": "ja"
         }
     },
     {
         "model": "myapp.Work",
         "pk": 4,
         "fields": {
-            "title": "ダミー4",
+            "title": "サンプル4",
             "image": "images/image_work_04.jpg",
             "thumbnail": "images/thumbnail_work_04.jpg",
-            "skill": "ダミー / ダミー",
+            "skill": "サンプル / サンプル",
             "url": null,
             "created": "2000-01-01",
-            "description": "ダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー",
-            "order": 1
+            "description": "サンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル",
+            "order": 1,
+            "language": "ja"
+        }
+    },
+    {
+        "model": "myapp.Work",
+        "pk": 5,
+        "fields": {
+            "title": "Sample1",
+            "image": "images/image_work_01.jpg",
+            "thumbnail": "images/thumbnail_work_01.jpg",
+            "skill": "Sample / Sample",
+            "url": null,
+            "created": "2000-01-01",
+            "description": "SampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample",
+            "order": 4,
+            "language": "en"
+        }
+    },
+    {
+        "model": "myapp.Work",
+        "pk": 6,
+        "fields": {
+            "title": "Sample2",
+            "image": "images/image_work_02.jpg",
+            "thumbnail": "images/thumbnail_work_02.jpg",
+            "skill": "Sample / Sample",
+            "url": null,
+            "created": "2000-01-01",
+            "description": "SampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample",
+            "order": 3,
+            "language": "en"
+        }
+    },
+    {
+        "model": "myapp.Work",
+        "pk": 7,
+        "fields": {
+            "title": "Dummy3",
+            "image": "images/image_work_03.jpg",
+            "thumbnail": "images/thumbnail_work_03.jpg",
+            "skill": "Sample / Sample",
+            "url": null,
+            "created": "2000-01-01",
+            "description": "SampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample",
+            "order": 2,
+            "language": "en"
+        }
+    },
+    {
+        "model": "myapp.Work",
+        "pk": 8,
+        "fields": {
+            "title": "Dummy4",
+            "image": "images/image_work_04.jpg",
+            "thumbnail": "images/thumbnail_work_04.jpg",
+            "skill": "Sample / Sample",
+            "url": null,
+            "created": "2000-01-01",
+            "description": "SampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample",
+            "order": 1,
+            "language": "en"
         }
     }
 ]

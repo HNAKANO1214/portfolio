@@ -1,5 +1,6 @@
 from django.views.generic import View
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
 
 from myapp.models import Work
 
@@ -17,7 +18,12 @@ class DetailView(View):
                 pk: 取得データのID(必須)
                 任意の引数
         """
-        work_data = Work.objects.get(id=self.kwargs['pk'])
+        work_data = Work.get_query_all().filter(id=self.kwargs['pk']).first()
+        if not work_data:
+            # 言語変更した際に発生する想定
+            # トップページにリダイレクト
+            return redirect('myapp:top_page')
+
         return render(request, 'myapp/detail.html', {
             'work_data': work_data
         })
