@@ -142,7 +142,8 @@ FIREBASE_STORAGE_BUCKET = env("FIREBASE_STORAGE_BUCKET", default="")
 FIREBASE_AUTH_JSON = env("FIREBASE_AUTH_JSON", default="")
 
 SITE_BASE_URL = env('SITE_BASE_URL', default="http://localhost:8000")
-SITE_TITLE = env('SITE_TITLE', default="Duumy's Profile")
+SITE_TITLE = env('SITE_TITLE', default="Sample's Portfolio")
+COPYRIGHT = env('COPYRIGHT', default="2000 Sample Portfolio")
 
 LOGGING = {
     'version': 1,

@@ -49,7 +49,6 @@ body {
 }
 
 .title {
-    color: black;
     font-size: 4rem;
 }
 
@@ -58,13 +57,20 @@ body {
 }
 
 .work-thumbnail {
-    overflow: hidden;
     position: relative;
+    width: 100%;
+    max-width: 320px;
+    padding-bottom: 100%;
+    overflow: hidden;
 }
 
 .work-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    height: 240px;
 }
 
 .work-title {

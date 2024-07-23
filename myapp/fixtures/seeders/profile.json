@@ -13,8 +13,8 @@
             "linkedin": null,
             "facebook": null,
             "instagram": null,
-            "topimage": "images/top.jpg",
-            "subimage": "images/profile.jpg",
+            "topimage": "images/top_ja.png",
+            "subimage": "images/profile_ja.png",
             "language": "ja"
         }
     },
@@ -32,8 +32,8 @@
             "linkedin": null,
             "facebook": null,
             "instagram": null,
-            "topimage": "images/top.jpg",
-            "subimage": "images/profile.jpg",
+            "topimage": "images/top_en.png",
+            "subimage": "images/profile_en.png",
             "language": "en"
         }
     }
