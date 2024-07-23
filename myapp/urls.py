@@ -9,7 +9,7 @@ from myapp.views import DummyRequestView
 
 app_name = "myapp"
 urlpatterns = [
-    path('', cache_page(60 * 15)(TopPageView.as_view()), name='top_page'),
+    path('', TopPageView.as_view(), name='top_page'),
     path('detail/<int:pk>', cache_page(60 * 15)(DetailView.as_view()), name='detail'),
     path('about/', AboutView.as_view(), name='about'),
     path('dummy_request/', DummyRequestView.as_view(), name='dummy_request'),

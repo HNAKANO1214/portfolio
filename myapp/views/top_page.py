@@ -1,8 +1,6 @@
 from django.http import HttpResponse
-from django.views.decorators.cache import cache_page
 from django.views.generic import View
 from django.shortcuts import render
-from django.utils.decorators import method_decorator
 
 from myapp.models import Profile, Work
 
@@ -10,7 +8,6 @@ from myapp.models import Profile, Work
 class TopPageView(View):
     """トップページのビュー"""
 
-    @method_decorator(cache_page(60 * 15))
     def get(self, request, *args, **kwargs):
         """get関数"""
         # クッキーの確認
