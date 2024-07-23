@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-23 01:29+0900\n"
+"POT-Creation-Date: 2024-07-24 07:26+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,25 +38,17 @@ msgstr "Software Skills"
 msgid "テクニカルスキル"
 msgstr "Technical Skills"
 
-#: templates/myapp/base.html:26
+#: templates/myapp/base.html:30
 msgid "ホーム"
 msgstr "Home"
 
-#: templates/myapp/base.html:29
+#: templates/myapp/base.html:33
 msgid "自己紹介"
 msgstr "About"
 
-#: templates/myapp/base.html:41
+#: templates/myapp/base.html:48
 msgid "言語"
 msgstr "Language"
-
-#: templates/myapp/base.html:44
-msgid "日本語"
-msgstr "Japanese"
-
-#: templates/myapp/base.html:45
-msgid "英語"
-msgstr "English"
 
 #: templates/myapp/detail.html:17
 msgid "基本情報"
@@ -65,3 +57,9 @@ msgstr "Infomation"
 #: templates/myapp/detail.html:43
 msgid "プロジェクト概要"
 msgstr "Project Description"
+
+#~ msgid "日本語"
+#~ msgstr "Japanese"
+
+#~ msgid "英語"
+#~ msgstr "English"

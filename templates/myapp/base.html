@@ -1,5 +1,6 @@
 {% load static %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -46,8 +47,12 @@
                         {% trans "言語" %}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{% url 'common:set_language' 'ja' %}">{% trans "日本語" %}</a></li>
-                        <li><a class="dropdown-item" href="{% url 'common:set_language' 'en' %}">{% trans "英語" %}</a></li>
+                        {% if LANGUAGE_CODE != 'ja' %}
+                            <li><a class="dropdown-item" href="{% url 'common:set_language' 'ja' %}">日本語</a></li>
+                        {% endif %}
+                        {% if LANGUAGE_CODE != 'en' %}
+                            <li><a class="dropdown-item" href="{% url 'common:set_language' 'en' %}">English</a></li>
+                        {% endif %}
                     </ul>
                 </li>
             </ul>
