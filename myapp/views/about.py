@@ -1,5 +1,7 @@
+from django.views.decorators.cache import cache_page
 from django.views.generic import View
 from django.shortcuts import render
+from django.utils.decorators import method_decorator
 
 from myapp.models import Profile, Experience, Education, Software, Technical
 
@@ -7,6 +9,7 @@ from myapp.models import Profile, Experience, Education, Software, Technical
 class AboutView(View):
     """プロフィールページのビュー"""
 
+    @method_decorator(cache_page(60 * 15))
     def get(self, request, *args, **kwargs):
         """get関数"""
         profile_data = Profile.get_query_all().order_by('-id').first()
