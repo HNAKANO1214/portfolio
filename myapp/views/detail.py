@@ -1,7 +1,5 @@
-from django.views.decorators.cache import cache_page
 from django.views.generic import View
 from django.shortcuts import render, redirect
-from django.utils.decorators import method_decorator
 
 
 from myapp.models import Work
@@ -10,7 +8,6 @@ from myapp.models import Work
 class DetailView(View):
     """業務/作品詳細ページのビュー"""
 
-    @method_decorator(cache_page(60 * 15))
     def get(self, request, *args, **kwargs):
         """get関数
 
