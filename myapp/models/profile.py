@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
+from django.utils.translation import get_language
 
 
 class Profile(models.Model):
@@ -23,6 +24,7 @@ class Profile(models.Model):
     topimage = models.ImageField(upload_to='images', verbose_name='トップ画像')
     subimage = models.ImageField(upload_to='images', verbose_name='サブ画像')
     order = models.IntegerField('表示順序', default=0)
+    language = models.CharField('言語', max_length=3, default='ja')
 
     def __str__(self):
         return self.name
@@ -37,6 +39,11 @@ class Profile(models.Model):
         if self.subimage:
             self.subimage.delete(save=False)
         super().delete(*args, **kwargs)
+
+    @classmethod
+    def get_query_all(cls):
+        """カレント言語に基づく全データ取得"""
+        return cls.objects.filter(language=get_language())
 
 
 @receiver(post_save, sender=Profile)

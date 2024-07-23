@@ -3,18 +3,38 @@
         "model": "myapp.Profile",
         "pk": 1,
         "fields": {
-            "title": "Dummy's profile",
-            "subtitle": null,
-            "name": "ダミー ダミー",
+            "title": "サンプル プロフィール",
+            "subtitle": "サンプル サブタイトル",
+            "name": "山田 太郎",
             "job": "ITエンジニア",
-            "introduction": "ダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー\nダミーダミーダミーダミーダミー",
+            "introduction": "サンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル\nサンプルサンプルサンプルサンプルサンプル",
             "github": null,
             "twitter": null,
             "linkedin": null,
             "facebook": null,
             "instagram": null,
-            "topimage": "images/top.jpg",
-            "subimage": "images/profile.jpg"
+            "topimage": "images/top_ja.png",
+            "subimage": "images/profile_ja.png",
+            "language": "ja"
+        }
+    },
+    {
+        "model": "myapp.Profile",
+        "pk": 2,
+        "fields": {
+            "title": "Sample profile",
+            "subtitle": "Sample Subtitle",
+            "name": "Taro Yamada",
+            "job": "IT Engineer",
+            "introduction": "SampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample\nSampleSampleSampleSampleSample",
+            "github": null,
+            "twitter": null,
+            "linkedin": null,
+            "facebook": null,
+            "instagram": null,
+            "topimage": "images/top_en.png",
+            "subimage": "images/profile_en.png",
+            "language": "en"
         }
     }
 ]

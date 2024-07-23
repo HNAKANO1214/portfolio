@@ -3,20 +3,44 @@
         "model": "myapp.Education",
         "pk": 1,
         "fields": {
-            "course": "ダミー学科",
-            "school": "ダミー大学1",
+            "course": "サンプル学科",
+            "school": "サンプル1大学",
             "period": "2004-04-01 - 2007-03-31",
-            "order": 2
+            "order": 2,
+            "language": "ja"
         }
     },
     {
         "model": "myapp.Education",
         "pk": 2,
         "fields": {
-            "course": "ダミー学科",
-            "school": "ダミー大学2",
+            "course": "サンプル学科",
+            "school": "サンプル2大学",
             "period": "2000-04-01 - 2003-03-31",
-            "order": 1
+            "order": 1,
+            "language": "ja"
+        }
+    },
+    {
+        "model": "myapp.Education",
+        "pk": 3,
+        "fields": {
+            "course": "Sample Department",
+            "school": "Sample1 University",
+            "period": "Apr. 01, 2004 - Mar. 31, 2007",
+            "order": 2,
+            "language": "en"
+        }
+    },
+    {
+        "model": "myapp.Education",
+        "pk": 4,
+        "fields": {
+            "course": "Sample Department",
+            "school": "Sample2 University",
+            "period": "Apr. 01, 2000 - Mar. 31, 2003",
+            "order": 1,
+            "language": "en"
         }
     }
 ]

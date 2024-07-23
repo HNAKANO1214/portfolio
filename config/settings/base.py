@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'widget_tweaks',
     'myapp',
+    'common',
 ]
 
 MIDDLEWARE = [
@@ -44,6 +45,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -91,12 +93,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
 LANGUAGE_CODE = 'ja'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'config/locale'),
+]
 
 TIME_ZONE = 'Asia/Tokyo'
-
-USE_I18N = True
-
-USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -137,7 +142,8 @@ FIREBASE_STORAGE_BUCKET = env("FIREBASE_STORAGE_BUCKET", default="")
 FIREBASE_AUTH_JSON = env("FIREBASE_AUTH_JSON", default="")
 
 SITE_BASE_URL = env('SITE_BASE_URL', default="http://localhost:8000")
-SITE_TITLE = env('SITE_TITLE', default="Duumy's Profile")
+SITE_TITLE = env('SITE_TITLE', default="Sample's Portfolio")
+COPYRIGHT = env('COPYRIGHT', default="2000 Sample Portfolio")
 
 LOGGING = {
     'version': 1,

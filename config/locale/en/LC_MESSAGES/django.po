@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-23 01:29+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/myapp/about.html:7
+msgid "プロフィール"
+msgstr "Profile"
+
+#: templates/myapp/about.html:52
+msgid "職務経歴"
+msgstr "Experience"
+
+#: templates/myapp/about.html:64
+msgid "学歴"
+msgstr "Education"
+
+#: templates/myapp/about.html:75
+msgid "ソフトウェアスキル"
+msgstr "Software Skills"
+
+#: templates/myapp/about.html:96
+msgid "テクニカルスキル"
+msgstr "Technical Skill"
+
+#: templates/myapp/base.html:26
+msgid "ホーム"
+msgstr "Home"
+
+#: templates/myapp/base.html:29
+msgid "自己紹介"
+msgstr "About"
+
+#: templates/myapp/base.html:41
+msgid "言語"
+msgstr "Language"
+
+#: templates/myapp/base.html:44
+msgid "日本語"
+msgstr "Japanese"
+
+#: templates/myapp/base.html:45
+msgid "英語"
+msgstr "English"
+
+#: templates/myapp/detail.html:17
+msgid "基本情報"
+msgstr "Infomation"
+
+#: templates/myapp/detail.html:43
+msgid "プロジェクト概要"
+msgstr "Project Description"

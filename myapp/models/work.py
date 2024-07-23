@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import get_language
 
 
 class Work(models.Model):
@@ -12,6 +13,7 @@ class Work(models.Model):
     created = models.DateField('作成日')
     description = models.TextField('説明', default='', blank=True)
     order = models.IntegerField('表示順序', default=0)
+    language = models.CharField('言語', max_length=3, default='ja')
 
     def __str__(self):
         return self.title
@@ -19,3 +21,8 @@ class Work(models.Model):
     class Meta:
         verbose_name = '業務/作品'
         verbose_name_plural = '業務/作品'
+
+    @classmethod
+    def get_query_all(cls):
+        """カレント言語に基づく全データ取得"""
+        return cls.objects.filter(language=get_language())
