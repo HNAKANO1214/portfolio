@@ -9,9 +9,7 @@ class AboutView(View):
 
     def get(self, request, *args, **kwargs):
         """get関数"""
-        profile_data = Profile.get_query_all()
-        if profile_data.exists():
-            profile_data = profile_data.order_by('-id')[0]
+        profile_data = Profile.get_query_all().order_by('-id').first()
         experience_data = Experience.get_query_all().order_by('-order', '-id')
         education_data = Education.get_query_all().order_by('-order', '-id')
         software_data = Software.get_query_all().order_by('-order', '-id')
