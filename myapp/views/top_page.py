@@ -10,8 +10,7 @@ class TopPageView(View):
 
     def get(self, request, *args, **kwargs):
         """get関数"""
-        current_language = get_language()
-        profile_data = Profile.objects.filter(language=current_language).order_by('-id')[0]
+        profile_data = Profile.objects.filter(language='en').order_by('-id')[0]
         work_data = Work.get_query_all().order_by('-order', '-id')
         return render(request, 'myapp/top_page.html', {
             'profile_data': profile_data,
