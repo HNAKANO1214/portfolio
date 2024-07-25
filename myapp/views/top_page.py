@@ -21,13 +21,11 @@ class TopPageView(View):
         rendered_content = render(request, 'myapp/top_page.html', {
             'profile_data': profile_data,
             'work_data': work_data,
-            'has_seen_animation': has_seen_animation,
         }).content
         response = HttpResponse(rendered_content)
 
-        # TODO: キャッシュしている関係で適切に動作しないため、コメントアウト
         # クッキーにアニメーションフラグを設定
-        # if not has_seen_animation:
-        #     response.set_cookie('has_seen_animation', 'true', max_age=3600)  # 1時間有効
+        if not has_seen_animation:
+            response.set_cookie('has_seen_animation', 'true', max_age=3600)  # 1時間有効
 
         return response
