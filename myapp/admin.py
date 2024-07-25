@@ -12,32 +12,32 @@ admin.site.index_title = 'モデル管理'
 
 class ProfileAdmin(admin.ModelAdmin):
     form = ProfileForm
-    list_display = ('id', 'title', 'name')
+    list_display = ('id', 'title', 'name', 'language')
 
 
 class WorkAdmin(admin.ModelAdmin):
     form = WorkForm
-    list_display = ('id', 'title')
+    list_display = ('id', 'title', 'language')
 
 
 class ExperienceAdmin(admin.ModelAdmin):
     form = ExperienceForm
-    list_display = ('id', 'occupation', 'company', 'period')
+    list_display = ('id', 'occupation', 'company', 'period', 'language')
 
 
 class EducationAdmin(admin.ModelAdmin):
     form = EducationForm
-    list_display = ('id', 'course', 'school', 'period')
+    list_display = ('id', 'course', 'school', 'period', 'language')
 
 
 class SoftwareAdmin(admin.ModelAdmin):
     form = SoftwareForm
-    list_display = ('id', 'name', 'level', 'percentage')
+    list_display = ('id', 'name', 'level', 'percentage', 'language')
 
 
 class TechnicalAdmin(admin.ModelAdmin):
     form = TechnicalForm
-    list_display = ('id', 'name', 'level', 'percentage')
+    list_display = ('id', 'name', 'level', 'percentage', 'language')
 
 
 admin.site.register(Profile, ProfileAdmin)
