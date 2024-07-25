@@ -113,7 +113,7 @@
         //テキストのカウントアップの設定
         var bar = new ProgressBar.Line(splash_text, {
         	strokeWidth: 0,		//進捗ゲージの太さ
-        	duration: 200,		//時間指定(1000＝1秒)
+        	duration: 400,		//時間指定(1000＝1秒)
         	trailWidth: 0,		//線の太さ
         	text: {
         		style: {
@@ -135,7 +135,7 @@
 
         //アニメーションスタート
         bar.animate(1.0, function () {				//バーを描画する割合を指定します 1.0 なら100%まで描画します
-        	$("#splash").delay(100).fadeOut(300);	//アニメーションが終わったら#splashエリアをフェードアウト
+        	$("#splash").delay(200).fadeOut(400);	//アニメーションが終わったら#splashエリアをフェードアウト
         });
         {% endif %}
     </script>
