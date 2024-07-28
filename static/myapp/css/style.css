@@ -68,6 +68,10 @@ body {
     overflow: hidden;
 }
 
+.work-thumbnail:hover {
+    transform: scale(1.05); /* Scale up by 5% on hover */
+}
+
 .work-img {
     position: absolute;
     top: 0;
