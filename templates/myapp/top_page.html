@@ -24,18 +24,20 @@
 <div class="row mb-5">
     {% for work in work_data %}
         <div class="col-6 col-md-3 mb-3">
-            <div class="card work-thumbnail">
+            <div class="card work-thumbnail
+                        {% if work.description %}work-active{% endif %}"
+            >
                 {% if work.thumbnail %}
                     <img src="{{ work.thumbnail.url }}" alt="" class="work-img">
                 {% else %}
                     <img src="{{ work.image.url }}" alt="" class="work-img">
                 {% endif %}
-                <div class="work-title text-center">
-                    <a class="mb-0">
-                        {{ work.title }}
-                    </a>
-                </div>
                 {% if work.description %}
+                    <div class="work-title text-center">
+                        <a class="mb-0">
+                            {{ work.title }}
+                        </a>
+                    </div>
                     <a href="{% url 'myapp:detail' work.id %}" class="stretched-link work"></a>
                 {% endif %}
             </div>
