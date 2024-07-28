@@ -5,7 +5,8 @@ from django.utils.translation import get_language
 class Work(models.Model):
     """業務/作品"""
     title = models.CharField('タイトル', max_length=100)
-    image = models.ImageField(upload_to="images", verbose_name='イメージ画像')
+    image = models.ImageField(
+        upload_to="images", verbose_name='イメージ画像', null='True', blank='True')
     thumbnail = models.ImageField(
         upload_to="images", verbose_name='サムネイル', null='True', blank='True')
     skill = models.CharField('スキル', max_length=100, default='', blank=True)
